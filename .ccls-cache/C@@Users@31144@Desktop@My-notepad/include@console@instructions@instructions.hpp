@@ -1,9 +1,11 @@
+#ifndef _INSTRUCTION_HPP_
+#define _INSTRUCTION_HPP_
 #include <string>
+#include <vector>
 class instruction{
     public:
-    virtual void implement() = 0;
-    virtual void implcement(std::string suffix,...) = 0;
-    std::string get_instructionName(){return this->instruction_name;}
-    protected:
-    std::string instruction_name;
+    virtual bool implement()=0;//Command without suffix
+    virtual bool implement(std::vector<std::string>instruction_suffix)=0;//Commands with suffix
+    virtual std::string get_instructionName()=0;
 };
+#endif

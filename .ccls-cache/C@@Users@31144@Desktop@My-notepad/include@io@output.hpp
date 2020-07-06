@@ -1,3 +1,5 @@
+#ifndef _OUTPUT_HPP_
+#define _OUTPUT_HPP_
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -7,3 +9,4 @@ class file_output{
     public:
         file_output(std::string open_file_route);
 };
+#endif

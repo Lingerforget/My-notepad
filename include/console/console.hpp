@@ -1,3 +1,5 @@
+#ifndef _CONSOLE_HPP_
+#define _CONSOLE_HPP_
 #include <Windows.h>
 #include "./instructions/instruction_master.hpp"
 /*
@@ -5,7 +7,7 @@
  */
 class instructions{
     public:
-    bool execute_instruction(instruction *instructions_name);
+    bool execute_instruction(instruction *instructions_name,std::vector<std::string> suffix);
 };
 class console{
     public:
@@ -13,3 +15,4 @@ class console{
         void input();
         void output();
 };
+#endif

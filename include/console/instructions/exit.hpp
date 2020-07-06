@@ -1,11 +1,16 @@
-#include "./instructions.hpp"
-class exit:public instruction{
+#ifndef _EXIT_HPP_
+#define _EXIT_HPP_
+#include "instructions.hpp"
+class EXIT:public instruction{
     public:
-    exit(){
-        instruction_name = "exit";
-    }
-    void implement();
+    virtual bool implement();
+    virtual bool implement(std::vector<std::string>instruction_suffix);
+    virtual std::string get_instructionName(){return "exit";}
 };
-void exit::implement(){
-
+bool EXIT::implement(){
+    return false;
 }
+bool EXIT::implement(std::vector<std::string>instruction_suffix){
+    return true;
+}
+#endif

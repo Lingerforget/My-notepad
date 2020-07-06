@@ -1,3 +1,5 @@
+#ifndef _INPUT_HPP_
+#define _INPUT_HPP_
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -29,3 +31,4 @@ class input_tofile{
      std::string file_route;
      std::string file_name;
 };
+#endif
